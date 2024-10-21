@@ -1,0 +1,103 @@
+#banner {  
+    width: 100%; /* Occupa l'intera larghezza della pagina */
+    height: 200px; /* Imposta un'altezza fissa per il banner */
+    object-fit: cover; /* Adatta l'immagine per coprire completamente il contenitore */
+    margin: 0; /* Rimuove eventuali margini */
+    padding: 0; /* Rimuove eventuali padding */
+    display: block; /* Assicura che l'immagine venga visualizzata come un blocco */
+}
+
+body {
+    background-color: rgb(111, 106, 99); /* Imposta lo sfondo della pagina su nero */
+    color: white; /* Imposta il colore del testo su bianco per contrasto */
+    margin: 0; /* Rimuove eventuali margini predefiniti */
+    padding: 0; /* Rimuove eventuali padding predefiniti */
+}
+
+.banner-container {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.bottoni-banner {
+    display: flex;
+    gap: 30px;
+    z-index: 5;
+}
+
+button {
+    background-color: rgb(71, 65, 46); /* Colore di sfondo del bottone */
+    color: rgb(249, 252, 228); /* Colore del testo del bottone */
+    border: none; /* Rimuove il bordo predefinito */
+    border-radius: 5px; /* Angoli arrotondati */
+    padding: 10px 20px; /* Spaziatura interna del bottone */
+    margin: 2%;
+    cursor: pointer; /* Cambia il cursore quando si passa sopra il bottone */
+    font-size: 16px; /* Dimensione del font */
+    text-align: center; /* Centro il testo */
+    font-style: initial;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: rgb(131, 121, 86); /* Cambia colore al passaggio del mouse */
+}
+.fascia-bianca {
+    background-color: rgb(255, 251, 251); /* Imposta lo sfondo della fascia su bianco */
+    height: 80px; /* Imposta l'altezza della fascia a 80px (puoi modificarlo) */
+    width: 100%; /* Assicura che la fascia copra tutta la larghezza */
+    display: flex; /* Utilizza flexbox per allineare i contenuti */
+    justify-content: center; /* Centra orizzontalmente i bottoni */
+    align-items: center; /* Centra verticalmente i bottoni */
+}
+#frase-al-centro{
+    font-family:"Allura", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 46px;
+    margin-top: 10%;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 5px rgb(255, 246, 66);}
+/* Regole per la visualizzazione su schermi più piccoli (ad es. telefoni) */
+/* Regole per la visualizzazione su schermi più piccoli (ad es. telefoni) */
+/* Regole per la visualizzazione su schermi più piccoli (ad es. telefoni) */
+@media (max-width: 768px) {
+    #banner {
+        height: 150px;
+    }
+
+    .banner-container {
+        height: 150px;
+    }
+
+    button {
+        padding: 6px 12px; /* Riduce la spaziatura interna dei bottoni */
+        font-size: 12px; /* Riduce la dimensione del font */
+        margin: 1%; /* Riduce lo spazio esterno */
+        flex: 1 1 auto; /* Permette ai bottoni di adattarsi alla larghezza disponibile */
+    }
+
+    #frase-al-centro {
+        margin-top: 10%;
+       font-size: 2rem;
+       font-family:"Allura", cursive;
+
+    }
+
+    .fascia-bianca {
+        height: 60px;
+    }
+
+    .bottoni-banner {
+        flex-direction: row; /* Mantiene i bottoni in linea orizzontale */
+        flex-wrap: nowrap; /* Non permette ai bottoni di andare su più righe */
+        justify-content: center; /* Centra i bottoni orizzontalmente */
+        width: 50%; /* Assicura che i bottoni occupino tutto lo spazio disponibile */
+        gap: 10px; /* Riduce lo spazio tra i bottoni */
+    }
+}

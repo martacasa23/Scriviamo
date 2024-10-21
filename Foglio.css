@@ -1,0 +1,159 @@
+/* Importa il font "Allura" da Google Fonts per utilizzarlo nel progetto */
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+/* Definisce le variabili CSS globali per i colori e altre proprietà */
+:root {
+    --base-clr: #11121a; /* Colore di sfondo principale */
+    --line-clr: #42434a; /* Colore per le linee di separazione */
+    --hover-clr: #222533; /* Colore per gli stati hover */
+    --txt-clr: #e6e6ef; /* Colore del testo principale */
+    --accent-clr: #5e63ff; /* Colore accentato per elementi speciali */
+    --secondary-text-clr: #b0b3c1; /* Colore per il testo secondario */
+    --shadow-clr: rgba(0, 0, 0, 0.2); /* Colore per le ombre */
+    --border-radius: 8px; /* Raggio di curvatura per angoli arrotondati */
+}
+
+/* Resetta margini e padding di tutti gli elementi per una maggiore coerenza */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding e bordo nelle dimensioni totali */
+}
+
+/* Imposta la linea di altezza e il font per l'intero documento */
+html {
+    font-family: 'Allura', cursive; /* Cambia il font */
+}
+
+/* Stili per il corpo della pagina */
+body {
+    min-height: 100vh; /* Altezza minima del corpo per coprire l'intera viewport */
+    background-color: var(--base-clr); /* Colore di sfondo del corpo */
+    color: var(--txt-clr); /* Colore del testo principale */
+    display: grid; /* Usa il layout a griglia */
+    grid-template-columns: 1fr; /* Una sola colonna */
+    justify-items: center; /* Centra gli elementi orizzontalmente */
+    align-items: start; /* Allinea gli elementi verticalmente all'inizio */
+    padding: 40px; /* Padding interno per il corpo */
+}
+
+/* Stili per il titolo principale */
+/* Stili per il titolo principale */
+#la-tua-storia {
+    margin: 20px 0;
+    color: white;
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 4rem); /* Si adatta alle dimensioni dello schermo */
+}
+
+/* Stili per il contenitore dei controlli */
+.controls {
+    margin: 10px 0;
+    color: white;
+    text-align: center;
+    font-size: 2rem
+}
+
+/* Sezione per il titolo dell'input */
+.headline {
+    margin: 30px 0;
+    width: 100%;
+    max-width: 600px;
+   
+}
+
+/* Stili per le etichette nella sezione titolo */
+.headline label {
+    margin: 10px 0;
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 2rem; /* Dimensione del testo adattabile */
+}
+
+/* Stili per l'input di tipo testo nella sezione titolo */
+.headline input[type="text"] {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 2px solid var(--line-clr);
+    border-radius: var(--border-radius);
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    font-size: 2rem; /* Dimensione adattata per l'input */
+}
+.text-area{
+    margin-bottom: 15px;
+    padding: 15px;
+    width: 100%;
+    height: 50px;
+    font-size: 2rem; /* Dimensione adattata per l'input */
+}
+
+
+@media (max-width: 800px) {
+    /* Stili di base */
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: 'Allura', cursive; /* Cambia il font */
+    font-size: 2rem
+}
+
+.opening h1{
+    font-family: 'Allura', cursive; /* Cambia il font */
+    font-size: 3rem; /* Dimensione maggiore */
+    color: white; /* Colore del testo */
+    text-align: center; /* Centro */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombra */
+    margin-bottom: 10px; /* Margine inferiore */
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+   
+}
+
+.controls label {
+    margin-top: 20px;
+    color: white;
+    font-family: 'Allura', cursive; /* Cambia il font */
+    font-size: 2rem
+}
+
+.controls input, .controls select, .headline input {
+    margin-top: 5px;
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    
+    
+}
+.headline label{
+    width: 100%;
+    font-family: 'Allura', cursive; /* Cambia il font */
+    font-size: 2rem;
+    
+    
+}
+
+.text-area {
+    width: 100%;
+    height: 50vh; /* Ridotto per i dispositivi mobili */
+    padding: 8px;
+    resize: none;
+    text-align: center;
+
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Pulsante a larghezza piena */
+}
+}

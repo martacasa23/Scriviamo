@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N5K1P4YPJK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N5K1P4YPJK');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheda Personaggio</title>
+    <script src="Personaggi.js" defer></script>
+</head>
+<body>
+    <style>
+    body {
+        font-family: 'Allura', cursive; /* Cambia il font */
+        background-color: #f0f4f8;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .character-sheet {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin: 10px 0 5px;
+    }
+
+    input[type="text"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+
+    textarea {
+        resize: none; /* Disabilita il ridimensionamento */
+    }
+
+    button {
+        background-color: #5cb85c;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+        width: 100%;
+    }
+
+    button:hover {
+        background-color: #4cae4c; /* Colore del pulsante al passaggio del mouse */
+    }
+</style>
+
+<div class="character-sheet">
+    <h2>Scheda Personaggio</h2>
+
+    <label for="name">Nome:</label>
+    <input type="text" id="name" placeholder="Es. John, Aria">
+    
+    <label for="age">Età:</label>
+    <input type="text" id="age" placeholder="Es. 25, 100 (se immortale)">
+    
+    <label for="race">Razza/Specie:</label>
+    <input type="text" id="race" placeholder="Es. Umano, Elfo, Androide">
+    
+    <label for="appearance">Aspetto Fisico:</label>
+    <textarea id="appearance" rows="3" placeholder="Es. Capelli lunghi biondi, occhi verdi"></textarea>
+    
+    <label for="personality">Carattere:</label>
+    <textarea id="personality" rows="3" placeholder="Es. Timido, impulsivo"></textarea>
+
+    <label for="abilities">Poteri/Abilità Speciali:</label>
+    <textarea id="abilities" rows="3" placeholder="Es. Magia, forza sovrumana"></textarea>
+
+    <label for="backstory">Storia:</label>
+    <textarea id="backstory" rows="3" placeholder="Es. Racconta il passato del tuo personaggio"></textarea>
+
+    <label for="goals">Obiettivi:</label>
+    <textarea id="goals" rows="3" placeholder="Es. Cosa vuole raggiungere"></textarea>
+
+    <label for="relationships">Relazioni:</label>
+    <textarea id="relationships" rows="3" placeholder="Es. Altri personaggi con cui ha legami"></textarea>
+
+    <label for="equipment">Equipaggiamento:</label>
+    <textarea id="equipment" rows="3" placeholder="Es. Oggetti o armi posseduti"></textarea>
+
+    <label for="strengths">Punti di Forza:</label>
+    <textarea id="strengths" rows="3" placeholder="Es. Qualità distintive"></textarea>
+
+    <label for="weaknesses">Punti di Debolezza:</label>
+    <textarea id="weaknesses" rows="3" placeholder="Es. Difetti del personaggio"></textarea>
+
+    <button onclick="downloadTextFile()">Scarica Scheda Personaggio</button>
+</div>
+
+</body>
+</html>

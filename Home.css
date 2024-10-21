@@ -1,0 +1,108 @@
+/* Stile generale per il titolo */
+h1 {
+  font-family: 'Allura', cursive; /* Font Allura */
+  color: rgb(46, 71, 46);
+  font-size: 500%;
+  text-shadow: 4px 4px 6px rgb(34, 52, 34);
+  margin: 0;
+  padding: 0;
+  font-size: clamp(70px, 9vw, 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+}
+
+/* Video di sfondo per desktop */
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Il video copre l'intera area */
+  z-index: -1; /* Manda il video sullo sfondo */
+}
+
+/* Immagine di sfondo per mobile (inizialmente nascosta) */
+#background-image {
+  display: none; /* L'immagine è nascosta per default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('sfondo\ mobile.png'); /* Sostituisci con il percorso dell'immagine */
+  background-size: cover;  /* Adatta l'immagine per coprire tutto lo schermo */
+  background-position: center;
+  z-index: -1;  /* Manda l'immagine sullo sfondo */
+}
+
+/* Stile del titolo */
+h1 {
+  font-family: 'Allura', cursive; /* Font del titolo */
+  color: rgb(46, 71, 46);
+  font-size: clamp(70px, 9vw, 100px); /* Dimensione dinamica del font */
+  text-shadow: 4px 4px 6px rgb(34, 52, 34);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+}
+
+/* Stile dei bottoni */
+.bottoni {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.bottoni button {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgb(46, 71, 46);
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Media query per dispositivi mobili */
+@media (max-width: 800px) {
+  #background-video {
+    display: none; /* Nascondi il video su mobile */
+  }
+
+  #background-image {
+    display: block; /* Mostra l'immagine su mobile */
+  }
+
+  /* Ridimensiona il titolo per i dispositivi mobili */
+  h1 {
+    font-size: clamp(60px, 8vw, 80px); /* Font più piccolo su mobile */
+  }
+
+  .bottoni {
+    flex-direction: column; /* Disposizione verticale dei bottoni su mobile */
+    top: auto;
+    bottom: 20px; /* Posiziona i bottoni più in basso su mobile */
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .bottoni button {
+    font-size: 14px; /* Ridimensiona i bottoni per mobile */
+    padding: 8px 12px;
+  }
+}

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+:root {
+    --base-clr: #11121a;
+    --line-clr: #42434a;
+    --hover-clr: #222533;
+    --txt-clr: #e6e6ef;
+    --accent-clr: #5e63ff;
+    --secondary-text-clr: #b0b3c1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Gestisce padding e margini correttamente */
+}
+
+html {
+    line-height: 1.5rem;
+    font-family:"Allura", cursive;
+
+}
+
+body {
+    min-height: 100vh;
+    background-color: beige;
+    color: var(--accent-clr);
+    display: grid;
+    grid-template-columns: 1fr; /* Layout a colonna singola */
+    padding: 20px; /* Spazio attorno */
+}
+
+label {
+    margin-top: 10%;
+    display: block;
+    text-align: center;
+    color: var(--accent-clr);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+#nome {
+    margin-top: 2%; /* Spazio sopra il campo di input */
+    width: 100%; /* Larghezza del campo di input */
+    padding: 15px; /* Maggiore padding per renderlo più grande */
+    color: black;
+    border: 2px solid #030303;
+    border-radius: 15px;
+    display: block; /* Assicurati che sia un blocco per una migliore disposizione */
+    margin-left: auto; /* Centro orizzontalmente */
+    margin-right: auto; /* Centro orizzontalmente */
+}
+
+#button {
+        display: block; /* Usa block o inline-flex */
+        margin: 20px auto; /* Margini automatici per centrare */
+        color: white; 
+        padding: 10px 20px; 
+        border-radius: 5px; 
+        font-size: 1.2rem; 
+        cursor: pointer; 
+        transition: background-color 0.3s; 
+        text-align: center;
+    }
+    
+
+.folder-list {
+    display: flex;
+    flex-direction: column; /* Disposizione verticale delle cartelle */
+    align-items: center; /* Centra le cartelle orizzontalmente */
+> h2 {
+  
+    font-size: 3rem;
+}
+}
+
+.folder {
+    margin: 5px 0;
+    padding: 20px; /* Aumenta il padding per rendere la casella più grande */
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    max-width: 400px; /* Larghezza massima */
+    font-size: 2.5rem;
+    color: #030303;
+}
+@media (min-width: 800px) {
+    #nome {
+        width: 90%; /* Larghezza del campo di input per dispositivi più grandi */
+    }
+
+    .folder-list > h2 {
+        font-size: 3rem; /* Dimensione del titolo per dispositivi più grandi */
+    }
+
+    .folder {
+        font-size: 2.5rem; /* Dimensione del testo per i riquadri delle cartelle */
+    }
+}
+
+

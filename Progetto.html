@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N5K1P4YPJK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N5K1P4YPJK');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Progetto.css">
+    <script src="Progetto.js" defer></script> <!-- Aggiunto defer per caricare lo script dopo il caricamento della pagina -->
+    <title>Progetto</title>
+</head>
+<body>
+    <form id="form1" name="form1" method="post" onsubmit="return createFolder(event)">
+        <label> Nome Cartella:<input type="text" name="nome" id="nome" required />
+        </label>
+        <div id="button">
+            <input type="submit" name="button" value="Invia" />
+        </div>
+    </form>
+    <div class="folder-list" id="folder-list">
+        <h2>Cartelle create:</h2>
+    </div>
+</body>
+</html>

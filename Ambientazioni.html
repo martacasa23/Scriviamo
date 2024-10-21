@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N5K1P4YPJK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N5K1P4YPJK');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheda Ambientazione</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docx/7.3.0/docx.min.js" defer></script>
+    <script src="ambientazioni.js" defer></script>
+    
+</head>
+<body>
+    <style>
+        body {
+            font-family: 'Allura', cursive; /* Cambia il font */
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+        }
+    
+        .character-sheet {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+    
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+    
+        textarea {
+            resize: none; /* Disabilita il ridimensionamento */
+        }
+    
+        button {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+    
+        button:hover {
+            background-color: #4cae4c; /* Colore del pulsante al passaggio del mouse */
+        }
+    </style>
+    
+
+<div class="environment-sheet">
+    <h2>Scheda Ambientazione</h2>
+
+    <label for="location">Luogo:</label>
+    <input type="text" id="location" placeholder="Es. Foresta Magica, Città di Ferro">
+    
+    <label for="time-period">Periodo Temporale:</label>
+    <input type="text" id="time-period" placeholder="Es. Medioevo, Futuro Distopico">
+    
+    <label for="climate">Clima:</label>
+    <input type="text" id="climate" placeholder="Es. Temperato, Tropicale">
+    
+    <label for="culture">Cultura:</label>
+    <textarea id="culture" rows="3" placeholder="Es. Tradizioni, Religioni, Stile di vita"></textarea>
+    
+    <label for="flora-fauna">Flora e Fauna:</label>
+    <textarea id="flora-fauna" rows="3" placeholder="Es. Piante, Animali, Creature Mitologiche"></textarea>
+
+    <label for="history">Storia:</label>
+    <textarea id="history" rows="3" placeholder="Es. Eventi significativi, Leggende"></textarea>
+
+    <button onclick="downloadEnvironmentSheet()">Scarica Scheda Ambientazione</button>
+</div>
+
+</body>
+</html>
