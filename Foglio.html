@@ -1,51 +1,46 @@
-<!DOCTYPE html> <!-- Dichiarazione del tipo di documento, indica che è un documento HTML5 -->
-<html lang="it"> <!-- Inizio del documento HTML e impostazione della lingua a Italiano -->
+<!DOCTYPE html>
+<html lang="it">
 <head>
-    <meta charset="UTF-8"> <!-- Imposta la codifica dei caratteri a UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Rende il layout responsive per i dispositivi mobili -->
-    <title>Editor di Testo</title> <!-- Titolo della pagina che appare nella scheda del browser -->
-    <link rel="stylesheet" href="Foglio.css"> <!-- Link al file CSS per la stilizzazione -->
-    <script src="Foglio.js" defer></script> <!-- Link al file JavaScript, caricato dopo il caricamento dell'HTML -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor di Testo</title>
+    <link rel="stylesheet" href="Foglio.css">
+    <script src="Foglio.js" defer></script>
 </head>
 <body>
-    <!-- Sezione di apertura con il titolo dell'editor -->
     <div class="opening" id="la-tua-storia">
-        <h1>La tua storia</h1> <!-- Titolo principale dell'editor -->
+        <h1>La tua storia</h1>
     </div>
     
-    <!-- Sezione di controllo per le opzioni dell'editor -->
     <div class="controls">
-        <label for="font-select">Seleziona un font:</label> <!-- Etichetta per il selettore del font -->
-        <select id="font-select" name="font"> <!-- Selettore per i font -->
-            <option value="Arial">Arial</option> <!-- Opzioni del font -->
+        <label for="font-select">Seleziona un font:</label>
+        <select id="font-select" name="font" onchange="changeFont(this.value)">
+            <option value="Arial">Arial</option>
             <option value="Georgia">Georgia</option>
             <option value="Times New Roman">Times New Roman</option>
             <option value="Courier New">Courier New</option>
         </select>
 
-        <label for="font-size">Dimensione Font:</label> <!-- Etichetta per la dimensione del font -->
-        <input type="number" id="font-size" value="16" min="8" max="72" onchange="changeFontSize(this.value)"> <!-- Input per la dimensione del font -->
+        <label for="font-size">Dimensione Font:</label>
+        <input type="number" id="font-size" value="16" min="8" max="72" onchange="changeFontSize(this.value)">
 
-        <label for="color-select">Colore testo:</label> <!-- Etichetta per il selettore del colore del testo -->
-        <input type="color" id="color-select" value="#000000" onchange="changeTextColor(this)"> <!-- Input per il colore del testo -->
-        
-        <label for="title-color-select">Colore titolo:</label> <!-- Etichetta per il selettore del colore del titolo -->
-        <input type="color" id="title-color-select" value="#ffffff" onchange="changeTitleColor(this)"> <!-- Input per il colore del titolo -->
+        <label for="color-select">Colore testo:</label>
+        <input type="color" id="color-select" value="#000000" onchange="changeTextColor(this.value)">
+
+        <label for="title-color-select">Colore titolo:</label>
+        <input type="color" id="title-color-select" value="#ffffff" onchange="changeTitleColor(this.value)">
     </div>
 
-    <!-- Sezione per l'inserimento del titolo -->
     <div class="headline">
-        <label for="headline">Titolo:</label> <!-- Etichetta per il campo del titolo -->
-        <input type="text" id="title" name="title"> <!-- Input per il titolo -->
+        <label for="headline">Titolo:</label>
+        <input type="text" id="title" name="title">
     </div>
 
-    <!-- Sezione per l'inserimento del testo -->
-   <div class="text-area">
-    <label for="text-area">Testo:</label> <!-- Etichetta per l'area di testo -->
-    <textarea id="text-area" oninput="updateCharacterCount()" style="width: 100%; height: 60vh; font-size: 16px; font-family: 'Arial', sans-serif;"></textarea> <!-- Area di testo principale -->
-    <p>Numero caratteri: <span id="output">0</span></p> <!-- Paragrafo per visualizzare il numero di caratteri -->
-    <button onclick="downloadTextFile()">Scarica la tua Storia</button>
-</div>
-</div>
+    <div class="text-area">
+        <label for="text-area">Testo:</label>
+        <textarea id="text-area" oninput="updateCharacterCount()" style="width: 100%; height: 60vh; font-size: 16px; font-family: 'Arial', sans-serif;"></textarea>
+        <p>Numero caratteri: <span id="output">0</span></p>
+        <button onclick="downloadTextFile()">Scarica la tua Storia</button>
+    </div>
 </body>
 </html>
